@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贾力鸥爱臭狗</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+        .game-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff69b4;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .love-meter {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #4CAF50;
+        }
+        .special-message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #FFD700;
+        }
+        .activity-suggestion {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>欢迎来到贾力鸥爱臭狗的游戏</h1>
+        <img src="https://img.alicdn.com/tfs/TB1QeWzXpXXXXcZXVXXXXXXXXXX-1080-1080.jpg" alt="李菡琦">
+        <button onclick="increaseLove()">给李菡琦加点爱吧！</button>
+        <div class="love-meter">当前喜爱值: <span id="loveValue">0</span></div>
+        <div class="special-message" id="specialMessage"></div>
+        <div class="activity-suggestion" id="activitySuggestion"></div>
+    </div>
+
+    <script>
+        let loveValue = 0;
+        const specialMessageElement = document.getElementById('specialMessage');
+        const loveValueElement = document.getElementById('loveValue');
+        const activitySuggestionElement = document.getElementById('activitySuggestion');
+
+        function increaseLove() {
+            loveValue++;
+            loveValueElement.textContent = loveValue;
+
+            if (loveValue >= 10 && loveValue < 20) {
+                specialMessageElement.textContent = "感谢大家的支持，我已经深深地爱上了你们！";
+                activitySuggestionElement.textContent = "一起去看电影怎么样？";
+            } else if (loveValue >= 20 && loveValue < 30) {
+                specialMessageElement.textContent = "我们真的是一拍即合呢！";
+                activitySuggestionElement.textContent = "一起去吃美食吧！";
+            } else if (loveValue >= 30 && loveValue < 40) {
+                specialMessageElement.textContent = "你们简直就是灵魂伴侣！";
+                activitySuggestionElement.textContent = "周末一起去爬山探险吧！";
+            } else if (loveValue >= 40 && loveValue < 50) {
+                specialMessageElement.textContent = "我们的关系越来越好了！";
+                activitySuggestionElement.textContent = "一起去旅行吧！";
+            } else if (loveValue >= 50 && loveValue < 60) {
+                specialMessageElement.textContent = "我们已经是最好的朋友了！";
+                activitySuggestionElement.textContent = "一起参加音乐节怎么样？";
+            } else if (loveValue >= 60 && loveValue < 70) {
+                specialMessageElement.textContent = "我们一起度过了这么多美好时光！";
+                activitySuggestionElement.textContent = "一起去野餐吧！";
+            } else if (loveValue >= 70 && loveValue < 80) {
+                specialMessageElement.textContent = "每一天和你在一起都很快乐！";
+                activitySuggestionElement.textContent = "一起去图书馆看书怎么样？";
+            } else if (loveValue >= 80 && loveValue < 90) {
+                specialMessageElement.textContent = "你是我的重要伙伴！";
+                activitySuggestionElement.textContent = "一起去健身房锻炼身体吧！";
+            } else if (loveValue >= 90 && loveValue < 100) {
+                specialMessageElement.textContent = "我们一起创造了很多美好的回忆！";
+                activitySuggestionElement.textContent = "一起去海边散步吧！";
+            } else if (loveValue >= 100 && loveValue < 110) {
+                specialMessageElement.textContent = "我真的很感激遇见你！";
+                activitySuggestionElement.textContent = "一起去泡温泉放松一下吧！";
+            } else if (loveValue >= 110 && loveValue < 120) {
+                specialMessageElement.textContent = "我们的友谊越来越深厚了！";
+                activitySuggestionElement.textContent = "一起去露营过夜怎么样？";
+            } else if (loveValue >= 120 && loveValue < 130) {
+                specialMessageElement.textContent = "我们一起经历了很多难忘的事情！";
+                activitySuggestionElement.textContent = "一起去画画怎么样？";
+            } else if (loveValue >= 130 && loveValue < 140) {
+                specialMessageElement.textContent = "你是我的心灵支柱！";
+                activitySuggestionElement.textContent = "一起去跳舞吧！";
+            } else if (loveValue >= 140 && loveValue < 150) {
+                specialMessageElement.textContent = "我们一起分享了很多快乐的时刻！";
+                activitySuggestionElement.textContent = "一起去游泳吧！";
+            } else if (loveValue >= 150 && loveValue < 160) {
+                specialMessageElement.textContent = "我是如此幸运能认识你！";
+                activitySuggestionElement.textContent = "一起去烘焙蛋糕吧！";
+            } else if (loveValue >= 160 && loveValue < 170) {
+                specialMessageElement.textContent = "我们的友情就像这游戏一样有趣！";
+                activitySuggestionElement.textContent = "一起去打保龄球吧！";
+            } else if (loveValue >= 170 && loveValue < 180) {
+                specialMessageElement.textContent = "我们一起度过的时间都是宝贵的！";
+                activitySuggestionElement.textContent = "一起去滑冰吧！";
+            } else if (loveValue >= 180 && loveValue < 190) {
+                specialMessageElement.textContent = "我们一起创造了无数的美好瞬间！";
+                activitySuggestionElement.textContent = "一起去攀岩挑战自己吧！";
+            } else if (loveValue >= 190 && loveValue < 200) {
+                specialMessageElement.textContent = "你是我的超级好朋友！";
+                activitySuggestionElement.textContent = "一起去热气球之旅吧！";
+            } else if (loveValue >= 200 && loveValue < 210) {
+                specialMessageElement.textContent = "我们的友谊像彩虹一样多彩！";
+                activitySuggestionElement.textContent = "一起去赛车体验速度吧！";
+            } else if (loveValue >= 210 && loveValue < 220) {
+                specialMessageElement.textContent = "我们一起经历了许多冒险！";
+                activitySuggestionElement.textContent = "一起去潜水探索海底世界吧！";
+            } else if (loveValue >= 220 && loveValue < 230) {
+                specialMessageElement.textContent = "你是我的最佳队友！";
+                activitySuggestionElement.textContent = "一起去烹饪比赛吧！";
+            } else if (loveValue >= 230 && loveValue < 240) {
+                specialMessageElement.textContent = "我们一起创造了许多美好的回忆！";
+                activitySuggestionElement.textContent = "一起去天文台看星星吧！";
+            } else if (loveValue >= 240 && loveValue < 250) {
+                specialMessageElement.textContent = "我们的友谊像钻石一样珍贵！";
+                activitySuggestionElement.textContent = "一起去滑雪享受冬天的乐趣吧！";
+            } else if (loveValue >= 250 && loveValue < 260) {
+                specialMessageElement.textContent = "我们一起做了很多有趣的事情！";
+                activitySuggestionElement.textContent = "一起去陶艺制作手工品吧！";
+            } else if (loveValue >= 260 && loveValue < 270) {
+                specialMessageElement.textContent = "你是我的灵感来源！";
+                activitySuggestionElement.textContent = "一起去画画展览参观吧！";
+            } else if (loveValue >= 270 && loveValue < 280) {
+                specialMessageElement.textContent = "我们一起度过的每一刻都很特别！";
+                activitySuggestionElement.textContent = "一起去音乐会感受美妙旋律吧！";
+            } else if (loveValue >= 280 && loveValue < 290) {
+                specialMessageElement.textContent = "我们的友谊像海洋一样深邃！";
+                activitySuggestionElement.textContent = "一起去帆船出海吧！";
+            } else if (loveValue >= 290 && loveValue < 300) {
+                specialMessageElement.textContent = "我们一起尝试了很多新鲜事物！";
+                activitySuggestionElement.textContent = "一起去马术俱乐部骑马吧！";
+            } else if (loveValue >= 300 && loveValue < 310) {
+                specialMessageElement.textContent = "你是我的得力助手！";
+                activitySuggestionElement.textContent = "一起去射击场体验刺激吧！";
+            } else if (loveValue >= 310 && loveValue < 320) {
+                specialMessageElement.textContent = "我们一起经历了许多难忘的经历！";
+                activitySuggestionElement.textContent = "一起去高尔夫球场打球吧！";
+            } else if (loveValue >= 320 && loveValue < 330) {
+                specialMessageElement.textContent = "我们的友谊像森林一样茂密！";
+                activitySuggestionElement.textContent = "一起去徒步穿越森林吧！";
+            } else if (loveValue >= 330 && loveValue < 340) {
+                specialMessageElement.textContent = "我们一起创造了无尽的美好记忆！";
+                activitySuggestionElement.textContent = "一起去皮划艇漂流吧！";
+            } else if (loveValue >= 340 && loveValue < 350) {
+                specialMessageElement.textContent = "你是我的良师益友！";
+                activitySuggestionElement.textContent = "一起去瑜伽馆放松身心吧！";
+            } else if (loveValue >= 350 && loveValue < 360) {
+                specialMessageElement.textContent = "我们一起分享了很多快乐的时光！";
+                activitySuggestionElement.textContent = "一起去射箭场练习射箭吧！";
+            } else if (loveValue >= 360 && loveValue < 370) {
+                specialMessageElement.textContent = "我是如此幸运能和你成为朋友！";
+                activitySuggestionElement.textContent = "一起去热气球之旅吧！";
+            } else if (loveValue >= 370 && loveValue < 380) {
+                specialMessageElement.textContent = "我们的友谊像阳光一样温暖！";
+                activitySuggestionElement.textContent = "一起去风筝放飞吧！";
+            } else if (loveValue >= 380 && loveValue < 390) {
+                specialMessageElement.textContent = "我们一起度过了许多愉快的日子！";
+                activitySuggestionElement.textContent = "一起去跳伞体验飞翔吧！";
+            } else if (loveValue >= 390 && loveValue < 400) {
+                specialMessageElement.textContent = "你是我的心灵导师！";
+                activitySuggestionElement.textContent = "一起去红酒品鉴会吧！";
+            } else if (loveValue >= 400 && loveValue < 410) {
+                specialMessageElement.textContent = "我们一起经历了许多精彩的瞬间！";
+                activitySuggestionElement.textContent = "一起去花店挑选鲜花吧！";
+            } else if (loveValue >= 410 && loveValue < 420) {
+                specialMessageElement.textContent = "我们的友谊像星辰一样璀璨！";
+                activitySuggestionElement.textContent = "一起去摄影展欣赏作品吧！";
+            } else if (loveValue >= 420 && loveValue < 430) {
+                specialMessageElement.textContent = "我们一起做了很多有意义的事情！";
+                activitySuggestionElement.textContent = "一起去宠物店领养小动物吧！";
+            } else if (loveValue >= 430 && loveValue < 440) {
+                specialMessageElement.textContent = "你是我的开心果！";
+                activitySuggestionElement.textContent = "一起去蹦床公园尽情跳跃吧！";
+            } else if (loveValue >= 440 && loveValue < 450) {
+                specialMessageElement.textContent = "我们一起度过的每一刻都很宝贵！";
+                activitySuggestionElement.textContent = "一起去魔术表演观看精彩魔术吧！";
+            } else if (loveValue >= 450 && loveValue < 460) {
+                specialMessageElement.textContent = "我们的友谊像宝石一样闪耀！";
+                activitySuggestionElement.textContent = "一起去赛车体验速度与激情吧！";
+            } else if (loveValue >= 460 && loveValue < 470) {
+                specialMessageElement.textContent = "我们一起尝试了很多新奇的事物！";
+                activitySuggestionElement.textContent = "一起去潜水中心探索神秘水下世界吧！";
+            } else if (loveValue >= 470 && loveValue < 480) {
+                specialMessageElement.textContent = "你是我的智囊团！";
+                activitySuggestionElement.textContent = "一起去烹饪课程学习做菜吧！";
+            } else if (loveValue >= 480 && loveValue < 490) {
+                specialMessageElement.textContent = "我们一起创造了无数的美好回忆！";
+                activitySuggestionElement.textContent = "一起去天线宝宝乐园玩耍吧！";
+            } else if (loveValue >= 490 && loveValue < 500) {
+                specialMessageElement.textContent = "我们的友谊像宇宙一样广阔！";
+                activitySuggestionElement.textContent = "一起去星际主题餐厅用餐吧！";
+            } else if (loveValue >= 500) {
+                specialMessageElement.textContent = "感谢你，我们已经成为了彼此生命中最重要的人！";
+                activitySuggestionElement.textContent = "让我们一起制定更多美好的计划吧！";
+            }
+        }
+    </script>
+</body>
+</html>
